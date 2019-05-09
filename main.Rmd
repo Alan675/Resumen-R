@@ -11,16 +11,13 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-## Básico
-
 Tenemos el siguiente archivo de extensión .txt:
 
 <p>
 ![dtiempo.txt](archivo_image.png)
 <p>
 
-Para cargar el archivo a R:
+**Para cargar el archivo a R**
 ```{r}
 datos<- read.table("dtiempos.txt", header=TRUE) 
 ```
@@ -28,14 +25,14 @@ datos<- read.table("dtiempos.txt", header=TRUE)
 ```header = TRUE``` Indica que el archivo posee encabezado, en este caso el header es **tiempo**
 
 
-Cargar el archivo manualmente:
+**Cargar el archivo manualmente**
 ```{r echo=TRUE, results='hide'}
 # datos2 <- read.table(file.choose(), header=TRUE)
 ```
 
 Luego los datos que estaban en el archivo ```dtiempos.txt``` quedaron almacenada en la variable ```datos```. A esta variable podemos hacer una variedad de operaciones, dentro de las cuales tenemos:
 
-### Resumen de la base de datos
+**Resumen de la base de datos**
 ```{r}
 summary(datos)
 ```
@@ -87,7 +84,9 @@ quantile(tiempo)
 ```
 
 **Percentiles puntuales**
+
   * ejemplo: 15%, 20%, 45%, 90%
+
 ```{r echo=TRUE}
 quantile(tiempo, c(.15, .2, .45, .90))
 ```
