@@ -2,10 +2,10 @@
 title: "Resumen Taller R"
 author: "Generación 2019"
 output:
-  html_document:
-    df_print: paged
   pdf_document:
     df_print: kable
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
