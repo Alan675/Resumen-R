@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, out.width='50%')
 ```
 Tenemos el siguiente archivo de extensión .txt:
 
@@ -53,23 +53,23 @@ attach(datos)
 Consultas a variable ```tiempo```:
 
 **Promedio**
-```{r echo=TRUE, results='hide'}
+```{r results='hide'}
 mean(tiempo)
 ```
 
 **Mediana**
-```{r echo=TRUE, results='hide'}
+```{r results='hide'}
 median(tiempo)
 ```
 
 
 **Varianza**
-```{r echo=TRUE, results='hide'}
+```{r results='hide'}
 var(tiempo)
 ```
 
 **Desviación estándar**
-```{r echo=TRUE, results='hide'}
+```{r results='hide'}
 sd(tiempo)
 ```
 
@@ -79,7 +79,7 @@ length(tiempo)
 ```
 
 **Cuartiles**
-```{r echo=TRUE}
+```{r}
 quantile(tiempo)
 ```
 
@@ -87,24 +87,24 @@ quantile(tiempo)
 
   * ejemplo: 15%, 20%, 45%, 90%
 
-```{r echo=TRUE}
+```{r}
 quantile(tiempo, c(.15, .2, .45, .90))
 ```
 
 **Deciles**
-```{r echo=TRUE}
+```{r}
 quantile(tiempo, probs=seq(from=0, to=1, by=0.1))
 ```
 
 **RIC** $(Q_3 - Q_1)$
-```{r echo=TRUE, results='hide'}
+```{r results='hide'}
 IQR(tiempo)
 ```
 
 ## Gráficos
 
 **Histograma (default)**
-```{r echo=TRUE}
+```{r}
 hist(tiempo)
 ```
 
@@ -116,27 +116,27 @@ hist(tiempo)
 * ```xlab="Tiempo (minutos)"```: Nombre eje $x$
 * ```ylab="Frecuencia"```: Nombre eje $y$
 
-```{r echo=TRUE}
+```{r}
 hist(tiempo, main="Histograma de tiempo", col="lightcyan", xlab="tiempo (min)", ylab="frecuencia")
 ```
 
 **Diagrama de caja**
-```{r echo=TRUE}
+```{r}
 boxplot(tiempo, main="Diagrama de caja de tiempo", col="lightcyan", ylab="tiempo (min)")
 ```
-```{r echo=TRUE}
+```{r}
 boxplot(tiempo, horizontal = TRUE)
 ```
 
 
 **Diagrama de tallo y hoja (default)**
 
-```{r echo=TRUE}
+```{r}
 stem(tiempo)
 ```
 
 **Diagrama de tallo y hoja con parámetros**
-```{r echo=TRUE, warning=FALSE}
+```{r warning=FALSE}
 stem(tiempo, seq(from=4, to=27, by=1))
 ```
 
@@ -153,3 +153,5 @@ Bibliografía y sitios de interés:
 * https://cran.r-project.org/doc/contrib/grafi3.pdf
 * http://www.dma.ulpgc.es/profesores/personal/stat/cursoR4ULPGC/9c-grafHistograma.html
 * https://picandoconr.wordpress.com/2016/02/08/graficos-con-r-histogramas/
+* https://sebastiansauer.github.io/figure_sizing_knitr/
+
